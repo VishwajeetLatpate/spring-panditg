@@ -20,7 +20,6 @@ public class ClientController {
 	@Autowired
 	private ClientService clientservice;
 	
-	
 	@GetMapping("/get-client")
 	public List<Client> getClient(){
 		
