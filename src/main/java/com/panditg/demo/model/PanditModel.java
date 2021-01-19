@@ -8,7 +8,10 @@ public class PanditModel {
 	private String city;
 	private String emailId;
 	private String password;
+	
+	private long vidhiPanditId;
 	private double dakshina;
+
 	public long getId() {
 		return id;
 	}
@@ -56,6 +59,12 @@ public class PanditModel {
 	}
 	public void setDakshina(double dakshina) {
 		this.dakshina = dakshina;
+	}
+	public long getVidhiPanditId() {
+		return vidhiPanditId;
+	}
+	public void setVidhiPanditId(long vidhiPanditId) {
+		this.vidhiPanditId = vidhiPanditId;
 	}
 	
 	

@@ -47,6 +47,7 @@ public class PanditServiceImp implements PanditService {
 			panditModel.setContactNumber(pandit.getContactNumber());
 			panditModel.setEmailId(pandit.getEmailId());
 			panditModel.setPassword(pandit.getPassword());
+			panditModel.setVidhiPanditId(vidhiPandit.getId());
 			panditModel.setDakshina(vidhiPandit.getDakshina());
 
 			panditModels.add(panditModel);

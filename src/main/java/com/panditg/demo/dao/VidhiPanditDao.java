@@ -23,6 +23,7 @@ public class VidhiPanditDao {
 	private NamedParameterJdbcTemplate jdbcTemplate;
 
 	private static final String GET_VIDHI_PANDIT_BY_VIDHI_ID = "select * from vidhi_pandit where vidhi_id = :vidhiId";
+	private static final String GET_VIDHI_PANDIT_BY_VIDHI_PANDIT_ID = "select * from vidhi_pandit where id = :vidhiPanditId";
 	private static final String INSERT_VIDHI_PANDIT = "insert into vidhi_pandit(vidhi_id,pandit_id,dakshina) values(:vidhiId,:panditId,:dakshina)";
 
 	@PostConstruct
@@ -47,6 +48,13 @@ public class VidhiPanditDao {
 		final int affectedRows = jdbcTemplate.update(INSERT_VIDHI_PANDIT, paramMap);
 
 		return affectedRows;
+	}
+
+	public VidhiPanditModel getVidhiPandit(long vidhiPanditId) {
+		final Map<String, Object> paramMap = new HashMap<>();
+		paramMap.put("vidhiPanditId", vidhiPanditId);
+
+		return jdbcTemplate.queryForObject(GET_VIDHI_PANDIT_BY_VIDHI_PANDIT_ID, paramMap, new VidhiPanditMapper());
 	}
 
 }
