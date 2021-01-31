@@ -16,6 +16,7 @@ public class BookingMapper implements RowMapper<BookingInfoModel> {
 		bookingInfoModel.setBookingId(rs.getLong("booking_id"));
 		bookingInfoModel.setClientId(rs.getLong("client_id"));
 		bookingInfoModel.setVidhiPanditId(rs.getLong("vidhi_pandit_id"));
+		bookingInfoModel.setDate(rs.getString("date"));
 		return bookingInfoModel;
 	}
 

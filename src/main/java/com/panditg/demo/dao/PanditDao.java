@@ -6,4 +6,6 @@ import com.panditg.demo.entities.Pandit;
 
 public interface PanditDao extends JpaRepository<Pandit, Long> {
 
+	public Pandit findByEmailIdAndPassword(String emailId, String password);
+
 }

@@ -54,6 +54,7 @@ public class BookingService {
 
 			final BookedPandit bookedPandit = new BookedPandit();
 			bookedPandit.setBookingId(bookingInfoModel.getBookingId());
+			bookedPandit.setDate(bookingInfoModel.getDate());
 			
 			bookedPandit.setVidhiPanditId(vidhiPandit.getId());
 			bookedPandit.setDakshina(vidhiPandit.getDakshina());

@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.panditg.demo.dao.PanditDao;
 import com.panditg.demo.dao.VidhiDao;
 import com.panditg.demo.dao.VidhiPanditDao;
+import com.panditg.demo.entities.Client;
 import com.panditg.demo.entities.Pandit;
 import com.panditg.demo.entities.Vidhi;
 import com.panditg.demo.model.PanditModel;
@@ -60,6 +61,10 @@ public class PanditServiceImp implements PanditService {
 	public Pandit addPandit(Pandit pandit) {
 		panditDao.save(pandit);
 		return pandit;
+	}
+	
+	public Pandit fetchPanditByEmailIdAndPassword(String emailId,String password) {
+		return panditDao.findByEmailIdAndPassword(emailId,password);
 	}
 
 }

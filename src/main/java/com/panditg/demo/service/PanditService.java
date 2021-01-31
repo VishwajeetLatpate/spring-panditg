@@ -8,4 +8,5 @@ import com.panditg.demo.model.PanditModel;
 public interface PanditService {
 	public List<PanditModel> getPanditByVidhiName(String vidhiName);
 	public Pandit addPandit(Pandit pandit);
+	public Pandit fetchPanditByEmailIdAndPassword(String tempEmailId, String tempPass);
 }
